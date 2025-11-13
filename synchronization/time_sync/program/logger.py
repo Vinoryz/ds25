@@ -55,7 +55,7 @@ def topo_sort_by_vc(events):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bind", default="0.0.0.0")
-    ap.add_argument("--port", type=int, default=9999)
+    ap.add_argument("--port", type=int, default=5900)
     ap.add_argument("--expect", type=int, default=2,
                     help="How many chat messages to wait for before printing orders")
     args = ap.parse_args()
