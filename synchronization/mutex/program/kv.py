@@ -309,7 +309,7 @@ class Node:
             if not addr:
                 time.sleep(0.05); continue
             try:
-                s=socket.create_connection(addr, timeout=0.5)
+                s=socket.create_connection(addr, timeout=2)
                 s.sendall(f"LOCK_REQ {self.id}\n".encode()); s.shutdown(socket.SHUT_WR)
                 resp=recv_all(s); s.close()
                 if resp.strip()=="GRANTED": return
